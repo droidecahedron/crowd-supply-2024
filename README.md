@@ -1,4 +1,8 @@
-# Crowd Supply 2024 Nordic Workshop 
+<p align="center">
+  <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/63935881/87097c00-54b2-45a6-8a33-311280c2a21f">
+</p>
+
+# Intro
 
 # Materials (HW / SW)
 - Thingy:91
