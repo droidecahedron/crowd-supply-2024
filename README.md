@@ -3,14 +3,14 @@
 </p>
 
 # Required Materials
-## HW
+## Hardware
 - Thingy:91 <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/63935881/2f0c115a-7909-4bda-8d90-6a85aa579ebf" width=4% height=4%> <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/63935881/b1be92a2-11c2-48ad-bf37-a4dfbbcf07ac" width=4% height=4%>
 
 - Micro-USB cable (likely to USBA)
   <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/63935881/c5b5e36f-6911-4b33-af32-0ccff6381a3d" width=4% height=4%>
   
 - Laptop 💻
-## SW
+## Software
 ### Video Guide
 [![SDK Installation Instructions](https://img.youtube.com/vi/EAJdOqsL9m8/0.jpg)](https://www.youtube.com/watch?v=EAJdOqsL9m8)
 
