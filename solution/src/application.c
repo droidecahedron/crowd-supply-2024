@@ -19,6 +19,7 @@
 #include <modem/location.h>
 #include "location_tracking.h"
 #endif
+#include <dk_buttons_and_leds.h>
 #include "application.h"
 #include "temperature.h"
 #include "cloud_connection.h"
@@ -41,6 +42,65 @@ BUILD_ASSERT(CONFIG_AT_CMD_REQUEST_RESPONSE_BUFFER_LENGTH >= AT_CMD_REQUEST_ERR_
 #define TEMP_ALERT_LIMIT ((double)CONFIG_TEMP_ALERT_LIMIT)
 #define TEMP_ALERT_HYSTERESIS 1.5
 #define TEMP_ALERT_LOWER_LIMIT (TEMP_ALERT_LIMIT - TEMP_ALERT_HYSTERESIS)
+
+/* State of the test counter. This can be changed using the configuration in the shadow */
+static bool test_counter_enabled;
+
+/* Storage for last received location */
+static struct location_data last_location;
+static int64_t last_location_ts;
+
+static void clear_location(void)
+{
+	last_location_ts = 0;
+	memset(&last_location, 0, sizeof(last_location));
+	LOG_INF("Location cleared.");
+}
+
+/* @brief Save location for sending to the cloud when button is pressed. */
+static void store_location(const struct location_data *loc)
+{
+	int64_t new_ts;
+	int err = date_time_now(&new_ts);
+
+	if (err) {
+		LOG_ERR("Failed to obtain current time, error %d", err);
+		return;
+	}
+
+	if (last_location_ts &&
+	    ((new_ts - last_location_ts) < (10 * 60 * 1000))) { /* 10 minutes */
+		/* Probably have not physically moved much, so require better accuracy */
+		if (loc->accuracy > last_location.accuracy) {
+			LOG_INF("Ignoring less accurate location");
+			return;
+		}
+		LOG_INF("More accurate location found; storing");
+	} else {
+		LOG_INF("Location stale; storing");
+	}
+	last_location = *loc;
+	last_location_ts = new_ts;
+}
+
+static void send_location(void)
+{
+	char msg[100];
+
+	if (!last_location_ts) {
+		LOG_ERR("No data to send yet!");
+		short_led_pattern(LED_FAILURE);
+		return;
+	}
+	snprintk(msg, sizeof(msg), "MARK,%.06f,N,%.06f,W,radius,%.01f,ts,%lld",
+		last_location.latitude,
+		last_location.longitude,
+		(double)last_location.accuracy,
+		last_location_ts);
+	(void)nrf_cloud_alert_send(ALERT_TYPE_MSG, 0, msg);
+	LOG_INF("Sent %s", msg);
+	short_led_pattern(LED_SUCCESS);
+}
 
 /**
  * @brief Construct a device message object with automatically generated timestamp
@@ -191,6 +251,7 @@ static void on_location_update(const struct location_event_data * const location
 		LOG_INF("GNSS Position Update! Sending to nRF Cloud...");
 		send_gnss(location_data);
 	}
+	store_location(&location_data->location);
 }
 #endif /* CONFIG_LOCATION_TRACKING */
 
@@ -303,6 +364,19 @@ static void monitor_temperature(double temp)
 	}
 }
 
+static void button_handler(uint32_t button_state, uint32_t has_changed)
+{
+	if (has_changed & DK_BTN1_MSK) {
+		if ((button_state & DK_BTN1_MSK) == DK_BTN1_MSK) {
+			LOG_INF("Button pressed!");
+			send_location();
+		} else {
+			LOG_INF("Button released!");
+			clear_location();
+		}
+	}
+}
+
 void main_application_thread_fn(void)
 {
 	if (IS_ENABLED(CONFIG_AT_CMD_REQUESTS)) {
@@ -311,6 +385,8 @@ void main_application_thread_fn(void)
 		 */
 		register_general_dev_msg_handler(handle_at_cmd_requests);
 	}
+
+	dk_buttons_init(button_handler);
 
 	/* Wait for first connection before starting the application. */
 	(void)await_cloud_ready(K_FOREVER);
