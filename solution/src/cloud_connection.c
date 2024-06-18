@@ -426,7 +426,7 @@ static void cloud_event_handler(const struct nrf_cloud_evt *nrf_cloud_evt)
 	case NRF_CLOUD_EVT_RX_DATA_GENERAL:
 		LOG_DBG("NRF_CLOUD_EVT_RX_DATA_GENERAL");
 		LOG_DBG("%d bytes received from cloud", nrf_cloud_evt->data.len);
-
+		LOG_WRN("Message: %*s", nrf_cloud_evt->data.len, (char *)nrf_cloud_evt->data.ptr);
 		/* Pass the device message along to the application, if it is listening */
 		if (general_dev_msg_handler) {
 			/* To keep the sample simple, we invoke the callback directly.
