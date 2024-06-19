@@ -115,11 +115,11 @@ static void led_pattern_failure(int frame_number)
 static void led_pattern_idle(int frame_number)
 {
 	if (IS_ENABLED(CONFIG_LED_INDICATOR_RGB)) {
-		/* A triangle wave between 0 and 20 */
-		int breath = abs((frame_number % 40) - 20);
+		/* A triangle wave between 0 and 10 with a pause between */
+		int breath = MAX((abs((frame_number % 40) - 20) - 10), 0);
 
-		/* Breathe back and forth between cyan and pure blue */
-		led_set_rgb(0, breath, 20);
+		/* Breathe back and forth between cyan and black */
+		led_set_rgb(0, breath, breath);
 	} else if (IS_ENABLED(CONFIG_LED_INDICATOR_4LED)) {
 		/* Square wave with period 40 frames and duty cycle 50% */
 		bool blink = (frame_number % 40) < 20;
