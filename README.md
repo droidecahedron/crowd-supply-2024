@@ -297,8 +297,8 @@ static void led_pattern_idle(int frame_number)
 - When Teardown 2024 and the Puzzle Hunt are complete, don't forget to return to your account page and click **Regenerate API Key**.
 - You might want to update the modem firmware in your Thingy:91 to the latest version.
   - This will improve the speed and accuracy of GPS fixes.
-  - Your Thingy:91 comes with mfw_1.3.4 installed.
-  - There is a FOTA update feature (firmware over the air) in nRF Cloud that would let you incrementally update the modem firmware from mfw_1.3.4 to mfw_1.3.5, and then again from mfw_1.3.5 to mfw_1.3.6.
+  - Your Thingy:91 comes with mfw_nrf9160_1.3.4 installed.
+  - There is a FOTA update feature (firmware over the air) in nRF Cloud that would let you incrementally update the modem firmware from mfw_nrf9160_1.3.4 to mfw_nrf9160_1.3.5, and then again from mfw_nrf9160_1.3.5 to mfw_nrf9160_1.3.6.
   - **Note**: doing these FOTA updates will consume about 1/3 of the free data allowance on your SIM. This should be OK for the weekend.
 <br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/10f01976-697e-48a3-8ac8-1d88a3bbe8ee" width="500"/>
 <br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/736732b2-52bd-4041-b26f-a5a5cd81ef8d" width="500"/>
