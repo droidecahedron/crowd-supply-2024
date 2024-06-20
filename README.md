@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/63935881/87097c00-54b2-45a6-8a33-311280c2a21f">
 </p>
@@ -15,15 +16,20 @@
 [![SDK Installation Instructions](https://img.youtube.com/vi/EAJdOqsL9m8/0.jpg)](https://www.youtube.com/watch?v=EAJdOqsL9m8)
 
 ☝️ Goes through the following checklist 👇
+
+**These are large downloads and take a long time. Please complete before the workshop.**
 - nRF Connect SDK
     - nRF CLI Tools (🔗 [Link](https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download?lang=en#infotabs))
-    - VS Code Extension Pack
-        - Toolchain - select v.2.6.1
-        - SDK - select v.2.6.1
-        - These are large downloads and take a long time. Please complete before the workshop.
-
-- Also install
     - nRF Connect for Desktop ([Link](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download#infotabs))
+    - nRF Connect for VS Code ([Link](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect))
+        - Click on extension icon in sidebar:
+	        - ⏳ Click **Install Toolchain** ⏳
+		        - Select v.2.6.1
+	        - ⏳ Click **Manage SDKs** --> **Install SDK** ⏳
+		        - Select v.2.6.1
+		        - Use default directory
+     - nRF Connect for VS Code Extension Pack  ([Link](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect-extension-pack))
+- nRF Connect for Desktop ([Link](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download#infotabs))
       - Install Programmer app
       - Install Serial Terminal app
 
@@ -46,21 +52,18 @@
 - Click on the nRF Connect icon in the left hand ribbon
 - Click on Open an existing application
 - Navigate to the base folder inside the repo
-- Click Open:
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/be469b34-96e5-41d3-93b1-8b76191241c5" width="500"/>
+- Click Open:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/be469b34-96e5-41d3-93b1-8b76191241c5" width="500"/>
 
 ## Under Applications at the bottom of the left pane 
 - Click on Add build configuration 
 - Select the “thingy91_nrf9160_ns” board
-- Click Build Configuration 
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/383b05dc-9d52-4514-ac83-f7b59f3881c2" width="500"/>
+- Click Build Configuration<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/383b05dc-9d52-4514-ac83-f7b59f3881c2" width="500"/>
 
 ## Launch nRF Connect for Desktop 
-- Click on the Programmer app
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8958ac27-c970-4f15-b830-521fb954d9d6" width="500"/>
+- Click on the Programmer app <br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8958ac27-c970-4f15-b830-521fb954d9d6" width="500"/>
 
 ## On your Thingy:91: 
-- Turn it off 
+- Power off your Thingy:91 and remove the orange cover.
 - Hold down the center button 
 - Turn it on then release the center button --> it is now in MCUboot mode (USB/serial bootloader) 
 - Connect it to your notebook with a micro USB cable
@@ -74,44 +77,42 @@
 - <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/b2cda5af-d629-402f-b344-554e043c54b2" width=500"/>
 - Click Write
 - Click Write again
-- The app will now program the device.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/ef736442-0a70-4cfa-9102-e99f01aa2c65" width="500"/>
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8e2644fd-9310-40f7-9ee3-723f3df4448c" width="500"/>
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8440f326-0cc4-427f-9be9-aa899a97bf24" width="500"/>
+- The app will now program the device.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/ef736442-0a70-4cfa-9102-e99f01aa2c65" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8e2644fd-9310-40f7-9ee3-723f3df4448c" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8440f326-0cc4-427f-9be9-aa899a97bf24" width="500"/>
 
 ## Create your nRF Cloud account:
 - Open a browser to: https://nrfcloud.com([Link](https://nrfcloud.com))
-- Click Register
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/9124ac0a-7dce-4a3d-b00d-d34264cd05ee" width="500"/>
-- Fill out the form.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/c644e7b0-2ecf-4379-844e-231d008ee844" width="500"/>
+- Click Register<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/9124ac0a-7dce-4a3d-b00d-d34264cd05ee" width="500"/>
+- Fill out the form.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/c644e7b0-2ecf-4379-844e-231d008ee844" width="500"/>
 - Click Create Account.
 - Receive confirmation code vial email.
-- Confirm the code.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8b023421-6171-4cbb-ba5d-f0ece6449769" width="500"/>
+- Confirm the code.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8b023421-6171-4cbb-ba5d-f0ece6449769" width="500"/>
 
 ## Register your SIM card:
 - Click on Device Management --> SIM Cards
 - Click Add SIM.
 - Fill out the form.
 - Click Activate SIM.
-- Follow any additional instructions.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/04caff91-8451-475c-81b9-7d8f8694e5cb" width="500"/>
-- Remove your Thingy:91 from its orange cover.
+- Follow any additional instructions.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/04caff91-8451-475c-81b9-7d8f8694e5cb" width="500"/>
+
+## View serial output:
+-  While your device is running, it generates log messages, which you can view using Serial Terminal.
+- Open Serial Terminal from nRF Connect for Desktop.
+- Click Select Device and select Thingy:91.
 - Remove the SIM from the carrier and insert into the SIM slot on your Thingy:91.
+- Cycle power on the Thingy using the toggle switch. 
+- The Serial Terminal application should automatically reconnect.
+- View the log messages:
+	- The device will wait for network connectivity and then attempt to connect to nRF Cloud.
+	- The initial connection attempt will fail, this is normal. The cloud is provisioning the device.
+	- Wait ~15 seconds before proceeding.
 
 ## Add your Thingy:91 to your account:
 - Click on Device Management --> Devices.
 - Click Add Devices.
 - Click LTE Device.
-- Fill out the form with info from the white sticker.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/bd1f27ff-1673-4750-b9fa-52c1b1aaffd8" width="500"/>
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/6028e6c9-3bf4-43db-85ca-8ba9b520f35d" width="500"/>
-- Your device should now be connected to your nRF Cloud account.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/a7d967c0-a04b-499a-805c-b3091363a0b0" width="500"/>
+- Fill out the form with info from the white sticker.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/bd1f27ff-1673-4750-b9fa-52c1b1aaffd8" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/6028e6c9-3bf4-43db-85ca-8ba9b520f35d" width="500"/>
+- Your device should now be connected to your nRF Cloud account.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/a7d967c0-a04b-499a-805c-b3091363a0b0" width="500"/>
 - Take a tour of this page.
-- While your device is running, it generates log messages, which you can view using Serial Terminal.
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/cfc04dc6-ecee-4631-af49-1a6b56098ffd" width="500"/>
 
 # Customizing The Sample For Solving Puzzles
 
@@ -140,10 +141,12 @@ static void button_handler(uint32_t button_state, uint32_t has_changed)
 }
 ```
 - Build your changes. 
-- In the Programmer app, hit Reload files. Place your Thingy:91 back in MCUboot mode, then click Write. 
-- In Serial Terminal, and watch the log output. 
-- Look for log messages when you press the button. 
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/30c1c0db-ad21-4b6c-b424-2d54ac4854a5" width="500"/>
+- Disconnect ⏏️ the device in Serial Terminal.
+- Power off your Thingy:91.
+- In the Programmer app, hit Reload files. 
+- Place your Thingy:91 back in MCUboot mode, reconnect to it in the Programmer app, then click Write.
+- When complete, reconnect the device in Serial Terminal and watch the log output. 
+- Look for log messages when you press the button.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/30c1c0db-ad21-4b6c-b424-2d54ac4854a5" width="500"/>
 
 ## Add variables and functions to maintain the most recent and best location data 
 - Add two global variables: 
@@ -236,10 +239,8 @@ static void button_handler(uint32_t button_state, uint32_t has_changed)
 } 
 ``` 
 - Try it out!
-- If you press the button before you have a new location, the Thingy:91 blinks red, and you see an error in the log: 
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/42d583c7-ef03-46fa-b1de-b341fa60656d" width="500"/>
-- Once you have a location, pressing the button sends an alert to your account, and you see that in the log:
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/814f7b87-03fe-4b39-9434-4cc8ac5f276f" width="500"/>
+- If you press the button before you have a new location, the Thingy:91 blinks red, and you see an error in the log:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/42d583c7-ef03-46fa-b1de-b341fa60656d" width="500"/>
+- Once you have a location, pressing the button sends an alert to your account, and you see that in the log:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/814f7b87-03fe-4b39-9434-4cc8ac5f276f" width="500"/>
 - **NOTE: this is a log captured over Bluetooth LE using the nRF Toolbox app UART Util Service.**
 - Enable BLE logging by editing the config file `Config.txt` on the mass storage device that appears when you connect over USB.
  
@@ -255,8 +256,7 @@ safely disconnect (unmount) the drive and disconnect the USB cable.
 BLE_ENABLED=1
 BLE_NAME=Thingy:91 UART
 ```
-- You will also see it appear as an alert in your nRF Cloud account on the device page:
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/7895e0f0-578a-4d61-9696-b197e92c012e" width="500"/>
+- You will also see it appear as an alert in your nRF Cloud account on the device page:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/7895e0f0-578a-4d61-9696-b197e92c012e" width="500"/>
 
 ## Receiving messages from the cloud
 - In `cloud_connection.c`, add one line to `cloud_event_handler()` in the `NRF_CLOUD_EVT_RX_DATA_GENERAL` case: 
@@ -271,8 +271,7 @@ case NRF_CLOUD_EVT_RX_DATA_GENERAL:
 ```JSON
 {"appId":"Hello from Teardown 2024!"} 
 ```
-- This will appear in the logs on the device: 
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/569cdc3f-70fc-4985-8d24-311a2f965d49"/>
+- This will appear in the logs on the device:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/569cdc3f-70fc-4985-8d24-311a2f965d49"/>
 
 ## Power draw improvements
 - Optimize some Kconfig settings in `prj.conf`: 
@@ -294,9 +293,6 @@ static void led_pattern_idle(int frame_number)
 ```
 # Puzzle Hunt
 - If you plan to participate in the Puzzle Hunt, send Josh at Crowd Supply your device id and your API_KEY 
-- Your device id is shown in your nRF Cloud account in the devices view. 
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/7e324b73-c018-49b5-beb4-3f201698b339" width="500"/>
-- Your API_KEY is visible on your account page:
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/00c8a941-f44a-44d2-a6a7-b68137035ff7" width="500"/>
-
-
+- Your device id is shown in your nRF Cloud account in the devices view.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/7e324b73-c018-49b5-beb4-3f201698b339" width="500"/>
+- Your API_KEY is visible on your account page:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/00c8a941-f44a-44d2-a6a7-b68137035ff7" width="500"/>
+- When Teardown 2024 and the Puzzle Hunt are complete, don't forget to return to your account page and click **Regenerate API Key**.
