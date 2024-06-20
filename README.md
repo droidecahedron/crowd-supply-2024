@@ -73,8 +73,7 @@
 - Navigate to crowd-supply-2024/base/build/zephyr 
 - Select app_signed.hex 
 - Click on Select Device 
-- Select Nordic Thingy:91
-- <img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/b2cda5af-d629-402f-b344-554e043c54b2" width=500"/>
+- Select Nordic Thingy:91<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/b2cda5af-d629-402f-b344-554e043c54b2" width="500"/>
 - Click Write
 - Click Write again
 - The app will now program the device.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/ef736442-0a70-4cfa-9102-e99f01aa2c65" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8e2644fd-9310-40f7-9ee3-723f3df4448c" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8440f326-0cc4-427f-9be9-aa899a97bf24" width="500"/>
