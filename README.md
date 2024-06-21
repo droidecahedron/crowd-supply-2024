@@ -113,7 +113,7 @@
 - Your device should now be connected to your nRF Cloud account.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/a7d967c0-a04b-499a-805c-b3091363a0b0" width="500"/>
 - Take a tour of this page.
 
-# Customizing The Sample For Solving Puzzles
+# How To Turn Your Thingy:91 Into a Puzzler:91
 
 ## Add a button handler in application.c
 - In VSCode, in the Explorer, view the source for `prj.conf`. 
