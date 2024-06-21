@@ -79,7 +79,7 @@
 - The app will now program the device.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/ef736442-0a70-4cfa-9102-e99f01aa2c65" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8e2644fd-9310-40f7-9ee3-723f3df4448c" width="500"/><br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/8440f326-0cc4-427f-9be9-aa899a97bf24" width="500"/>
 
 ## Create your nRF Cloud account:
-- Open a browser to: https://nrfcloud.com([Link](https://nrfcloud.com))
+- Open a browser to: https://nrfcloud.com ([Link](https://nrfcloud.com))
 - Click Register<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/9124ac0a-7dce-4a3d-b00d-d34264cd05ee" width="500"/>
 - Fill out the form.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/c644e7b0-2ecf-4379-844e-231d008ee844" width="500"/>
 - Click Create Account.
