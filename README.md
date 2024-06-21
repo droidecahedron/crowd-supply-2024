@@ -291,7 +291,7 @@ static void led_pattern_idle(int frame_number)
 	} else if (IS_ENABLED(CONFIG_LED_INDICATOR_4LED)) { 
 ```
 # Puzzle Hunt
-- If you plan to participate in the Puzzle Hunt, send Josh at Crowd Supply your device id and your API_KEY 
+- If you plan to participate in the Puzzle Hunt, register your team here: ([Link](https://www.crowdsupply.com/login?next=%2Fpuzzle-hunt)) 
 - Your device id is shown in your nRF Cloud account in the devices view.<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/7e324b73-c018-49b5-beb4-3f201698b339" width="500"/>
 - Your API_KEY is visible on your account page:<br><img src="https://github.com/droidecahedron/crowd-supply-2024/assets/380268/00c8a941-f44a-44d2-a6a7-b68137035ff7" width="500"/>
 - When Teardown 2024 and the Puzzle Hunt are complete, don't forget to return to your account page and click **Regenerate API Key**.
