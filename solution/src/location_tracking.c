@@ -123,6 +123,8 @@ int start_location_tracking(location_update_cb_t handler_cb, int interval)
 	 * library will try them in priority order.
 	 */
 	config.mode = LOCATION_REQ_MODE_ALL;
+	/* Use this default instead? */
+	/* config.mode = LOCATION_REQ_MODE_FALLBACK; */
 
 	/* Set the location report interval. */
 	config.interval = interval;
